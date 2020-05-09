@@ -1,0 +1,52 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+body{
+	background-color: #f2f2f2;
+	height: 100vh;
+}
+
+#content{
+	width: 50vh;
+	height: 86vh;
+	margin: 6vh auto;
+}
+
+h2{
+	font-weight: normal;
+	font-size: 5vh;
+}
+
+#gameContainer{
+	width: 49vh;
+	height: 70vh;
+	border: 2px solid black;
+	margin: 0px auto;
+	box-sizing: content-box;
+}
+
+.squareContainer{
+	width: 7vh;
+	height: 7vh;
+	background-color: white;
+	overflow: hidden;
+	float: left;
+}
+
+.squareBorder{
+	width: 100%;
+	height: 100%;
+	border: 2px solid black;
+}
+
+.squareContent{
+	width: 50%;
+	height: 50%;
+	margin: -75% auto;
+	background-color: black;
+	border-radius: 50%;
+}
