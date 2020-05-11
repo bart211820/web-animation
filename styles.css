@@ -41,12 +41,92 @@ h2{
 	width: 100%;
 	height: 100%;
 	border: 2px solid black;
+	position: relative;
+	z-index: 2;
 }
 
 .squareContent{
 	width: 50%;
 	height: 50%;
 	margin: -75% auto;
-	background-color: black;
+	/*background-color: black;*/
 	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+.squareContainerSelected{
+	animation: AblackGoOutRightAway 0.5s;
+}
+.blackGoOut{
+	animation: AblackGoOutRightAway 0.5s;
+}
+@-webkit-keyframes AblackGoOutRightAway {
+    0% {
+        background-color: rgba(24, 24, 24, 0.6);
+    }
+    100% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+}
+.blinkBlack{
+	animation: AblinkBlack 3s;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes AblinkBlack {
+    0% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+    50% {
+        background-color: rgba(24, 24, 24, 1);
+    }
+    100% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+}
+.turnBlack{
+	animation: AturnBlack 0.5s forwards;
+}
+@-webkit-keyframes AturnBlack {
+    0% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+    100% {
+        background-color: rgba(24, 24, 24, 1);
+    }
+}
+.removeBlack{
+	animation: AremoveBlack 0.5s forwards;
+}
+@-webkit-keyframes AremoveBlack {
+    0% {
+        background-color: rgba(24, 24, 24, 1);
+    }
+    100% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+}
+.tempBlack{
+	animation: AtempBlack 1.5s forwards;
+}
+@-webkit-keyframes AtempBlack {
+    0% {
+        background-color: rgba(24, 24, 24, 0);
+    }
+    20% {
+        background-color: rgba(24, 24, 24, 1);
+    }
+    80% {
+        background-color: rgba(24, 24, 24, 1);
+    }
+    100% {
+        background-color: rgba(24, 24, 24, 0);
+    }
 }
