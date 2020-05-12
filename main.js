@@ -6,8 +6,38 @@ $(document).ready(function(){
 		$(this).removeClass("squareContainerSelected");
 	});
 
+	function resetFields() {
+		$(".squareContainer").removeClass("blinkBlack");
+		$(".squareContainer").removeClass("tempBlack");
+		$(".squareContainer").removeClass("turnBlack");
+		$(".squareContainer").removeClass("blackGoOut");
+		$(".squareContainer").removeClass("removeBlack");
+
+		$(".squareContent").removeClass("contentAppear");
+		$(".squareContent").removeClass("arrow1");
+		$(".squareContent").removeClass("arrow2");
+		$(".squareContent").removeClass("arrow3");
+		$(".squareContent").removeClass("arrow4");
+
+		$(".squareContent").removeClass("pointN");
+		$(".squareContent").removeClass("pointNO");
+		$(".squareContent").removeClass("pointO");
+		$(".squareContent").removeClass("pointOZ");
+		$(".squareContent").removeClass("pointZ");
+		$(".squareContent").removeClass("pointZW");
+		$(".squareContent").removeClass("pointW");
+		$(".squareContent").removeClass("pointNN");
+	}
+
+	function showArrow(location, arrowKind, rotation) {
+		$("#square" + location + " .squareContent").addClass("point" + rotation);
+		$("#square" + location + " .squareContent").addClass("arrow" + arrowKind);
+		$("#square" + location + " .squareContent").addClass("contentAppear");
+	}
+
 	$(document).on('mouseenter', '.state0 #squareB1', function () {
-		$("#squareB1").removeClass("blinkBlack");
+		resetFields();
+
 		$("#squareB2").addClass("tempBlack");
 		setTimeout(function(){
 			$("#squareB3").addClass("tempBlack");
@@ -45,8 +75,7 @@ $(document).ready(function(){
 	});
 
 	$(document).on('mouseenter', '.state1 #squareI4', function () {
-		$(".squareContainer").removeClass("tempBlack");
-		$(".squareContainer").removeClass("turnBlack");
+		resetFields();
 
 		$("#squareI4").addClass("turnBlack");
 		$("#squareI3").addClass("turnBlack");
@@ -118,4 +147,41 @@ $(document).ready(function(){
 		$("#gameContainer").addClass("state2");
 	});
 
+	$(document).on('mouseenter', '.state2 #squareA4', function () {
+		resetFields();
+
+		showArrow("A4", "2", "Z");
+		setTimeout(function(){
+			showArrow("B2", "2", "OZ");
+		}, 250);
+		setTimeout(function(){
+			showArrow("C6", "2", "Z");
+		}, 500);
+		setTimeout(function(){
+			showArrow("D7", "2", "Z");
+		}, 750);
+		setTimeout(function(){
+			showArrow("F3", "2", "OZ");
+		}, 1000);
+		setTimeout(function(){
+			showArrow("G5", "2", "OZ");
+		}, 1250);
+		setTimeout(function(){
+			showArrow("H3", "2", "O");
+		}, 1500);
+		setTimeout(function(){
+			showArrow("I2", "2", "O");
+		}, 1750);
+		setTimeout(function(){
+			showArrow("J7", "2", "WN");
+		}, 2000);
+	}).on('mouseleave', '.state2 #squareA4', function () {
+		$("#gameContainer").removeClass("state2");
+		$("#gameContainer").addClass("state3");
+	});
+
+	$(document).on('mouseenter', '.state3 #squareI6', function () {
+		resetFields();
+
+	});
 });

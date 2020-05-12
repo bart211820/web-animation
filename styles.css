@@ -46,13 +46,53 @@ h2{
 }
 
 .squareContent{
-	width: 50%;
-	height: 50%;
-	margin: -75% auto;
-	/*background-color: black;*/
+	width: 70%;
+	height: 70%;
+	margin: -85% auto;
 	border-radius: 50%;
 	position: relative;
 	z-index: 1;
+	background-size: 80% 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.arrow1{
+	background-image: url(img/arrow1.png);
+}
+.arrow2{
+	background-image: url(img/arrow2.png);
+}
+.arrow3{
+	background-image: url(img/arrow3.png);
+}
+.arrow4{
+	background-image: url(img/arrow4.png);
+}
+
+.pointN{
+	transform: rotate(0deg);
+}
+.pointNO{
+	transform: rotate(45deg);
+}
+.pointO{
+	transform: rotate(90deg);
+}
+.pointOZ{
+	transform: rotate(135deg);
+}
+.pointZ{
+	transform: rotate(180deg);
+}
+.pointZW{
+	transform: rotate(225deg);
+}
+.pointW{
+	transform: rotate(270deg);
+}
+.pointWN{
+	transform: rotate(315deg);
 }
 
 
@@ -128,5 +168,17 @@ h2{
     }
     100% {
         background-color: rgba(24, 24, 24, 0);
+    }
+}
+
+.contentAppear{
+	animation: AContentAppear 0.5s;
+}
+@-webkit-keyframes AContentAppear {
+    0% {
+        margin: 0% auto;
+    }
+    100% {
+        margin: -85% auto;
     }
 }
