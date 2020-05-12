@@ -223,9 +223,156 @@ $(document).ready(function(){
 
 	$(document).on('mouseenter', '.state4 #squareF4', function () {
 		resetFields();
-		
+		$("#squareE4").addClass("blackGoOut");
+		setTimeout(function(){
+			$("#squareD4").addClass("blackGoOut");
+		}, 75);
+		setTimeout(function(){
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareD4").removeClass("blackGoOut");
+		}, 150);
+		setTimeout(function(){
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE4").removeClass("blackGoOut");
+		}, 275);
+		setTimeout(function(){
+			$("#squareE4").addClass("blackGoOut");
+		}, 400);
+		setTimeout(function(){
+			$("#squareF4").addClass("blackGoOut");
+		}, 475);
+		setTimeout(function(){
+			$("#squareG4").addClass("blackGoOut");
+		}, 550);
+		setTimeout(function(){
+			$("#squareH4").addClass("blackGoOut");
+		}, 600);
+		setTimeout(function(){
+			$("#squareI4").addClass("blackGoOut");
+		}, 630);
+		setTimeout(function(){
+			$("#squareJ4").addClass("blackGoOut");
+			$("#squareJ3").addClass("blackGoOut");
+			$("#squareJ5").addClass("blackGoOut");
+		}, 650);
+		setTimeout(function(){
+			$("#squareJ2").addClass("blackGoOut");
+			$("#squareJ1").addClass("blackGoOut");
+			$("#squareI1").addClass("blackGoOut");
+			$("#squareJ6").addClass("blackGoOut");
+			$("#squareJ7").addClass("blackGoOut");
+			$("#squareI7").addClass("blackGoOut");
+		}, 700);
+		setTimeout(function(){
+			$("#squareH1").addClass("blackGoOut");
+			$("#squareG1").addClass("blackGoOut");
+			$("#squareH7").addClass("blackGoOut");
+			$("#squareG7").addClass("blackGoOut");
+		}, 750);
+		setTimeout(function(){
+			$("#squareF1").addClass("blackGoOut");
+			$("#squareE1").addClass("blackGoOut");
+			$("#squareF7").addClass("blackGoOut");
+			$("#squareE7").addClass("blackGoOut");
+		}, 820);
+		setTimeout(function(){
+			$("#squareD1").addClass("blackGoOut");
+			$("#squareC1").addClass("blackGoOut");
+			$("#squareD7").addClass("blackGoOut");
+			$("#squareC7").addClass("blackGoOut");
+		}, 910);
+		setTimeout(function(){
+			$("#squareB1").addClass("blackGoOut");
+			$("#squareB7").addClass("blackGoOut");
+		}, 1010);
+		setTimeout(function(){
+			resetFields();
+		}, 1070);
+		setTimeout(function(){
+			$("#squareC1").addClass("blackGoOut");
+			$("#squareC7").addClass("blackGoOut");
+		}, 1110);
+		setTimeout(function(){
+			$("#squareD1").addClass("blackGoOut");
+			$("#squareD7").addClass("blackGoOut");
+			$("#squareE1").addClass("blackGoOut");
+			$("#squareE7").addClass("blackGoOut");
+		}, 1200);
+		setTimeout(function(){
+			$("#squareF1").addClass("blackGoOut");
+			$("#squareF7").addClass("blackGoOut");
+			$("#squareG1").addClass("blackGoOut");
+			$("#squareG7").addClass("blackGoOut");
+		}, 1270);
+		setTimeout(function(){
+			$("#squareH1").addClass("blackGoOut");
+			$("#squareH7").addClass("blackGoOut");
+			$("#squareI1").addClass("blackGoOut");
+			$("#squareI7").addClass("blackGoOut");
+		}, 1320);
+		setTimeout(function(){
+			$("#squareH1").addClass("blackGoOut");
+			$("#squareH7").addClass("blackGoOut");
+			$("#squareI1").addClass("blackGoOut");
+			$("#squareI7").addClass("blackGoOut");
+		}, 1360);
+		setTimeout(function(){
+			$("#squareJ1").addClass("blackGoOut");
+			$("#squareJ2").addClass("blackGoOut");
+			$("#squareJ3").addClass("blackGoOut");
+			$("#squareJ5").addClass("blackGoOut");
+			$("#squareJ6").addClass("blackGoOut");
+			$("#squareJ7").addClass("blackGoOut");
+		}, 1390);
+
+		setTimeout(function(){
+			$("#squareJ1").addClass("blackGoOut");
+			$("#squareI3").addClass("blackGoOut");
+			$("#squareI4").addClass("blackGoOut");
+			$("#squareI5").addClass("blackGoOut");
+			$("#squareH3").addClass("turnBlack");
+			$("#squareH5").addClass("turnBlack");
+		}, 1440);
+
+		setTimeout(function(){
+			$("#squareH4").addClass("turnBlack");
+			$("#squareG3").addClass("turnBlack");
+			$("#squareG5").addClass("turnBlack");
+		}, 1480);
+		setTimeout(function(){
+			$("#squareG4").addClass("turnBlack");
+			$("#squareF3").addClass("turnBlack");
+			$("#squareF5").addClass("turnBlack");
+		}, 1520);
+		setTimeout(function(){
+			$("#squareF4").addClass("turnBlack");
+			$("#squareE3").addClass("turnBlack");
+			$("#squareE5").addClass("turnBlack");
+		}, 1560);
+		setTimeout(function(){
+			$("#squareE2").addClass("turnBlack");
+			$("#squareE4").addClass("turnBlack");
+			$("#squareE6").addClass("turnBlack");
+			$("#squareD3").addClass("turnBlack");
+			$("#squareD5").addClass("turnBlack");
+		}, 1600);
+		setTimeout(function(){
+			$("#squareD4").addClass("turnBlack");
+			$("#squareC4").addClass("turnBlack");
+		}, 1640);
+		setTimeout(function(){
+			$("#squareB4").addClass("blackGoOut");
+		}, 1680);
 	}).on('mouseleave', '.state4 #squareF4', function () {
 		$("#gameContainer").removeClass("state4");
 		$("#gameContainer").addClass("state5");
+	});
+
+	$(document).on('mouseenter', '.state5 #squareB4', function () {
+		resetFields();
+		
+	}).on('mouseleave', '.state3 #squareI9', function () {
+		$("#gameContainer").removeClass("state5");
+		$("#gameContainer").addClass("state6");
 	});
 });
