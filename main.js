@@ -182,6 +182,50 @@ $(document).ready(function(){
 
 	$(document).on('mouseenter', '.state3 #squareI6', function () {
 		resetFields();
+		showArrow("F7", "3", "W");
+		setTimeout(function(){
+			showArrow("A4", "3", "Z");
+		}, 250);
+		setTimeout(function(){
+			showArrow("F1", "3", "O");
+		}, 500);
+		setTimeout(function(){
+			showArrow("J1", "3", "NO");
+		}, 750);
+		setTimeout(function(){
+			showArrow("J7", "3", "WN");
+		}, 1000);
+		setTimeout(function(){
+			showArrow("D6", "3", "ZW");
+		}, 1250);
+		setTimeout(function(){
+			showArrow("B5", "3", "Z");
+		}, 1500);
+		setTimeout(function(){
+			showArrow("B3", "3", "Z");
+		}, 1750);
+		setTimeout(function(){
+			showArrow("D2", "3", "OZ");
+		}, 2000);
+		setTimeout(function(){
+			showArrow("I4", "3", "N");
+		}, 2250);
+		setTimeout(function(){
+			showArrow("G5", "3", "WN");
+		}, 2500);
+		setTimeout(function(){
+			showArrow("G3", "3", "NO");
+		}, 2750);
+	}).on('mouseleave', '.state3 #squareI6', function () {
+		$("#gameContainer").removeClass("state3");
+		$("#gameContainer").addClass("state4");
+	});
 
+	$(document).on('mouseenter', '.state4 #squareF4', function () {
+		resetFields();
+		
+	}).on('mouseleave', '.state4 #squareF4', function () {
+		$("#gameContainer").removeClass("state4");
+		$("#gameContainer").addClass("state5");
 	});
 });
