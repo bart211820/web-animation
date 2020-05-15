@@ -8,17 +8,40 @@
 body{
 	background-color: #f2f2f2;
 	height: 100vh;
+	overflow: hidden;
 }
 
 #content{
 	width: 50vh;
 	height: 86vh;
-	margin: 6vh auto;
+	transform: perspective(0px) rotateY(1deg);
 }
 
 h2{
 	font-weight: normal;
 	font-size: 5vh;
+}
+
+#containerOwO{
+	display: flex;
+	justify-content: center;
+	margin-top: 6vh;
+}
+
+.sliderContainer{
+	width: 7vw;
+}
+
+.sliderContainer p{
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	font-size: 2vw;
+	padding-bottom: 18vw;
+}
+
+.sliderContainer input{
+	transform: rotate(90deg);
 }
 
 #gameContainer{
@@ -27,6 +50,7 @@ h2{
 	border: 2px solid black;
 	margin: 0px auto;
 	box-sizing: content-box;
+	background-color: white;
 }
 
 .squareContainer{

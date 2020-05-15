@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+	var colorR = 0;
+	var colorG = 0;
+	var colorB = 0;
+	var special = 1;
+
+	$(document).on('input', '#colorRslider', function() {
+	    colorR = $('#colorRslider').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#colorGslider', function() {
+	    colorG = $('#colorGslider').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#colorBslider', function() {
+	    colorB = $('#colorBslider').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#specialSlider', function() {
+	    special = $('#specialSlider').val();
+	    $("#content").css("transform", "perspective(0px) rotateY(" + (special) + "deg)");
+	});
+
+	function setColors() {
+		$(".squareBorder").css("border-color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
+		$("#gameContainer").css("border-color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
+		$("body").css("color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
+		console.log("rgb(" + colorR + " " + colorG + " " + colorB + ")");
+	}
+
+
+
 	$(document).on('mouseenter', '.squareBorder', function () {
 		$(this).addClass("squareContainerSelected");
 	}).on('mouseleave', '.squareBorder', function () {
