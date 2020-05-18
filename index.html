@@ -10,15 +10,6 @@
 </head>
 <body>
 	<div id="containerOwO">
-		<div class="sliderContainer">
-			<p>R</p>
-			<input type="range" id="colorRslider" name="colorRslider" min="0" max="255" value="0">
-		</div>
-		<div class="sliderContainer">
-			<p>G</p>
-			<input type="range" id="colorGslider" name="colorRslider" min="0" max="255" value="0">
-		</div>
-		
 		<div id="content">
 			<h2>THAT WAY</h2>
 			<div id="gameContainer" class="state0">
@@ -314,16 +305,24 @@
 			</div>
 			<h2>TO THE LEFT</h2>
 		</div>
-
-		<div class="sliderContainer">
-			<p>B</p>
-			<input type="range" id="colorBslider" name="colorRslider" min="0" max="255" value="0">
+		<div id="optionsContainer">
+			<div class="sliderContainer">
+				<span>R</span>
+				<input type="range" id="colorRslider" name="colorRslider" min="0" max="255" value="0">
+			</div>
+			<div class="sliderContainer">
+				<span>G</span>
+				<input type="range" id="colorGslider" name="colorRslider" min="0" max="255" value="0">
+			</div>
+			<div class="sliderContainer">
+				<span>B</span>
+				<input type="range" id="colorBslider" name="colorRslider" min="0" max="255" value="0">
+			</div>
+			<div class="sliderContainer">
+				<span>*</span>
+				<input type="range" id="specialSlider" name="specialSlider" min="1" max="180" value="1" orient="vertical">
+			</div>
 		</div>
-		<div class="sliderContainer">
-			<p>*</p>
-			<input type="range" id="specialSlider" name="specialSlider" min="1" max="180" value="1" orient="vertical">
-		</div>
-
 	</div>
 </body>
 </html>

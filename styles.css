@@ -8,13 +8,13 @@
 body{
 	background-color: #f2f2f2;
 	height: 100vh;
-	overflow: hidden;
 }
 
 #content{
 	width: 50vh;
 	height: 86vh;
 	transform: perspective(0px) rotateY(1deg);
+	margin: 0px auto;
 }
 
 h2{
@@ -23,25 +23,28 @@ h2{
 }
 
 #containerOwO{
-	display: flex;
-	justify-content: center;
 	margin-top: 6vh;
 }
 
-.sliderContainer{
-	width: 7vw;
+#optionsContainer{
+	margin: 0px auto 3vh;
+	width: 50vh;
 }
 
-.sliderContainer p{
+.sliderContainer{
+	width: 50vh;
+}
+
+.sliderContainer span{
 	font-weight: bold;
-	width: 100%;
 	text-align: center;
 	font-size: 2vw;
-	padding-bottom: 18vw;
+	width: 10vh;
+	display: inline-block;
 }
 
 .sliderContainer input{
-	transform: rotate(90deg);
+	width: 35vh;
 }
 
 #gameContainer{
