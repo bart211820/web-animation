@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	rescaleBackground();
 	var colorR = 0;
 	var colorG = 0;
 	var colorB = 0;
@@ -409,4 +409,31 @@ $(document).ready(function(){
 		$("#gameContainer").removeClass("state5");
 		$("#gameContainer").addClass("state6");
 	});
+
+
+
+
+
+
+
+
+
+	
+
 });
+
+$(window).resize(rescaleBackground);
+
+function rescaleBackground(){
+	var backgroundHTML = "";
+	for (i = 0; i < 1000; i++) {
+		backgroundHTML = backgroundHTML + '<div class="backgroundBox"></div>';
+	}
+	$('.background').html(backgroundHTML);
+
+	var vensterWidth = $(window).width();
+	var vensterHeight = $(window).height();
+	var squareWidth = $(".squareContainer").width();
+	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth);
+	$(".background").css("width", backgroundWidth + "px");
+}
