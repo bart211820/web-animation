@@ -57,6 +57,8 @@ $(document).ready(function(){
 		$(".squareBorder").css("border-color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		$("#gameContainer").css("border-color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		$("body").css("color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
+		$(".backgroundBox").css("border", "2px solid rgb(" + colorR + " " + colorG + " " + colorB + ")");
+		$(".background").css("border", "1px solid rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		console.log("rgb(" + colorR + " " + colorG + " " + colorB + ")");
 	}
 
@@ -431,12 +433,215 @@ $(document).ready(function(){
 	});
 
 	$(document).on('mouseenter', '.state5 #squareB4', function () {
+
 		resetFields();
+		showKonamiCode()
+		window.setInterval(function(){
+		  showKonamiCode();
+		}, 5500);
 		
 	}).on('mouseleave', '.state3 #squareI9', function () {
 		$("#gameContainer").removeClass("state5");
 		$("#gameContainer").addClass("state6");
 	});
+
+	function showKonamiCode(){
+		$("#squareB4").addClass("blackGoOut");
+		$("#squareC3").addClass("blackGoOut");
+		$("#squareC4").addClass("blackGoOut");
+		$("#squareC5").addClass("blackGoOut");
+		$("#squareD2").addClass("blackGoOut");
+		$("#squareD3").addClass("blackGoOut");
+		$("#squareD4").addClass("blackGoOut");
+		$("#squareD5").addClass("blackGoOut");
+		$("#squareD6").addClass("blackGoOut");
+		$("#squareE4").addClass("blackGoOut");
+		$("#squareF4").addClass("blackGoOut");
+		$("#squareG4").addClass("blackGoOut");
+		$("#squareH4").addClass("blackGoOut");
+		$("#squareI4").addClass("blackGoOut");
+		setTimeout(function(){
+			resetFields();
+		}, 250);
+		setTimeout(function(){
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareC3").addClass("blackGoOut");
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareC5").addClass("blackGoOut");
+			$("#squareD2").addClass("blackGoOut");
+			$("#squareD3").addClass("blackGoOut");
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareD5").addClass("blackGoOut");
+			$("#squareD6").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+			$("#squareH4").addClass("blackGoOut");
+			$("#squareI4").addClass("blackGoOut");
+		}, 500);
+		setTimeout(function(){
+			resetFields();
+		}, 750);
+		setTimeout(function(){
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareG2").addClass("blackGoOut");
+			$("#squareG3").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+			$("#squareG5").addClass("blackGoOut");
+			$("#squareG6").addClass("blackGoOut");
+			$("#squareH3").addClass("blackGoOut");
+			$("#squareH4").addClass("blackGoOut");
+			$("#squareH5").addClass("blackGoOut");
+			$("#squareI4").addClass("blackGoOut");
+		}, 1000);
+		setTimeout(function(){
+			resetFields();
+		}, 1250);
+		setTimeout(function(){
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareG2").addClass("blackGoOut");
+			$("#squareG3").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+			$("#squareG5").addClass("blackGoOut");
+			$("#squareG6").addClass("blackGoOut");
+			$("#squareH3").addClass("blackGoOut");
+			$("#squareH4").addClass("blackGoOut");
+			$("#squareH5").addClass("blackGoOut");
+			$("#squareI4").addClass("blackGoOut");
+		}, 1500);
+		setTimeout(function(){
+			resetFields();
+		}, 1750);
+		setTimeout(function(){
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareD3").addClass("blackGoOut");
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE2").addClass("blackGoOut");
+			$("#squareE3").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareE5").addClass("blackGoOut");
+			$("#squareE6").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+		}, 2000);
+		setTimeout(function(){
+			resetFields();
+		}, 2250);
+		setTimeout(function(){
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareE5").addClass("blackGoOut");
+			$("#squareF2").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareF5").addClass("blackGoOut");
+			$("#squareF6").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+			$("#squareG5").addClass("blackGoOut");
+			$("#squareH4").addClass("blackGoOut");
+		}, 2500);
+		setTimeout(function(){
+			resetFields();
+		}, 2750);
+		setTimeout(function(){
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareD3").addClass("blackGoOut");
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE2").addClass("blackGoOut");
+			$("#squareE3").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareE5").addClass("blackGoOut");
+			$("#squareE6").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+		}, 3000);
+		setTimeout(function(){
+			resetFields();
+		}, 3250);
+		setTimeout(function(){
+			$("#squareD4").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareE5").addClass("blackGoOut");
+			$("#squareF2").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareF5").addClass("blackGoOut");
+			$("#squareF6").addClass("blackGoOut");
+			$("#squareG4").addClass("blackGoOut");
+			$("#squareG5").addClass("blackGoOut");
+			$("#squareH4").addClass("blackGoOut");
+		}, 3500);
+		setTimeout(function(){
+			resetFields();
+		}, 3750);
+		setTimeout(function(){
+			$("#squareB3").addClass("blackGoOut");
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareB5").addClass("blackGoOut");
+			$("#squareC2").addClass("blackGoOut");
+			$("#squareC3").addClass("blackGoOut");
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareC5").addClass("blackGoOut");
+			$("#squareC6").addClass("blackGoOut");
+			$("#squareD2").addClass("blackGoOut");
+			$("#squareD6").addClass("blackGoOut");
+			$("#squareE2").addClass("blackGoOut");
+			$("#squareE6").addClass("blackGoOut");
+			$("#squareF2").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareF5").addClass("blackGoOut");
+			$("#squareF6").addClass("blackGoOut");
+			$("#squareG2").addClass("blackGoOut");
+			$("#squareG6").addClass("blackGoOut");
+			$("#squareH2").addClass("blackGoOut");
+			$("#squareH6").addClass("blackGoOut");
+			$("#squareI2").addClass("blackGoOut");
+			$("#squareI6").addClass("blackGoOut");
+		}, 4000);
+		setTimeout(function(){
+			resetFields();
+		}, 4250);
+		setTimeout(function(){
+			$("#squareB2").addClass("blackGoOut");
+			$("#squareB3").addClass("blackGoOut");
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareB5").addClass("blackGoOut");
+			$("#squareC2").addClass("blackGoOut");
+			$("#squareC5").addClass("blackGoOut");
+			$("#squareD2").addClass("blackGoOut");
+			$("#squareD5").addClass("blackGoOut");
+			$("#squareE2").addClass("blackGoOut");
+			$("#squareE3").addClass("blackGoOut");
+			$("#squareE4").addClass("blackGoOut");
+			$("#squareE5").addClass("blackGoOut");
+			$("#squareE6").addClass("blackGoOut");
+			$("#squareF2").addClass("blackGoOut");
+			$("#squareF6").addClass("blackGoOut");
+			$("#squareG2").addClass("blackGoOut");
+			$("#squareG6").addClass("blackGoOut");
+			$("#squareH2").addClass("blackGoOut");
+			$("#squareH6").addClass("blackGoOut");
+			$("#squareI2").addClass("blackGoOut");
+			$("#squareI3").addClass("blackGoOut");
+			$("#squareI4").addClass("blackGoOut");
+			$("#squareI5").addClass("blackGoOut");
+			$("#squareI6").addClass("blackGoOut");
+		}, 4500);
+		setTimeout(function(){
+			resetFields();
+		}, 4750);
+	}
 
 });
 
