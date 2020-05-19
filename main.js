@@ -585,34 +585,6 @@ $(document).ready(function(){
 			resetFields();
 		}, 3750);
 		setTimeout(function(){
-			$("#squareB3").addClass("blackGoOut");
-			$("#squareB4").addClass("blackGoOut");
-			$("#squareB5").addClass("blackGoOut");
-			$("#squareC2").addClass("blackGoOut");
-			$("#squareC3").addClass("blackGoOut");
-			$("#squareC4").addClass("blackGoOut");
-			$("#squareC5").addClass("blackGoOut");
-			$("#squareC6").addClass("blackGoOut");
-			$("#squareD2").addClass("blackGoOut");
-			$("#squareD6").addClass("blackGoOut");
-			$("#squareE2").addClass("blackGoOut");
-			$("#squareE6").addClass("blackGoOut");
-			$("#squareF2").addClass("blackGoOut");
-			$("#squareF3").addClass("blackGoOut");
-			$("#squareF4").addClass("blackGoOut");
-			$("#squareF5").addClass("blackGoOut");
-			$("#squareF6").addClass("blackGoOut");
-			$("#squareG2").addClass("blackGoOut");
-			$("#squareG6").addClass("blackGoOut");
-			$("#squareH2").addClass("blackGoOut");
-			$("#squareH6").addClass("blackGoOut");
-			$("#squareI2").addClass("blackGoOut");
-			$("#squareI6").addClass("blackGoOut");
-		}, 4000);
-		setTimeout(function(){
-			resetFields();
-		}, 4250);
-		setTimeout(function(){
 			$("#squareB2").addClass("blackGoOut");
 			$("#squareB3").addClass("blackGoOut");
 			$("#squareB4").addClass("blackGoOut");
@@ -636,6 +608,34 @@ $(document).ready(function(){
 			$("#squareI3").addClass("blackGoOut");
 			$("#squareI4").addClass("blackGoOut");
 			$("#squareI5").addClass("blackGoOut");
+			$("#squareI6").addClass("blackGoOut");
+		}, 4000);
+		setTimeout(function(){
+			resetFields();
+		}, 4250);
+		setTimeout(function(){
+			$("#squareB3").addClass("blackGoOut");
+			$("#squareB4").addClass("blackGoOut");
+			$("#squareB5").addClass("blackGoOut");
+			$("#squareC2").addClass("blackGoOut");
+			$("#squareC3").addClass("blackGoOut");
+			$("#squareC4").addClass("blackGoOut");
+			$("#squareC5").addClass("blackGoOut");
+			$("#squareC6").addClass("blackGoOut");
+			$("#squareD2").addClass("blackGoOut");
+			$("#squareD6").addClass("blackGoOut");
+			$("#squareE2").addClass("blackGoOut");
+			$("#squareE6").addClass("blackGoOut");
+			$("#squareF2").addClass("blackGoOut");
+			$("#squareF3").addClass("blackGoOut");
+			$("#squareF4").addClass("blackGoOut");
+			$("#squareF5").addClass("blackGoOut");
+			$("#squareF6").addClass("blackGoOut");
+			$("#squareG2").addClass("blackGoOut");
+			$("#squareG6").addClass("blackGoOut");
+			$("#squareH2").addClass("blackGoOut");
+			$("#squareH6").addClass("blackGoOut");
+			$("#squareI2").addClass("blackGoOut");
 			$("#squareI6").addClass("blackGoOut");
 		}, 4500);
 		setTimeout(function(){
