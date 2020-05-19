@@ -346,11 +346,21 @@ h2{
 	background-size: 65% 80%;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	line-height: 14vw;
 }
 
-.customKeyboardButton:hover{
-	background-color: #BF181F;
+.customKeyboardButtonClicked{
+	animation: customKeyboardButtonAnimation 0.5s linear;
 }
+@-webkit-keyframes customKeyboardButtonAnimation {
+    0% {
+        background-color: #BF181F;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
 
 #buttonLeft{
 	transform: rotate(270deg);

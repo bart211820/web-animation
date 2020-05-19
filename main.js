@@ -66,21 +66,45 @@ $(document).ready(function(){
 
 	$("#buttonLeft").click(function() {
 		konamiButtonPressed("l");
+		$("#buttonLeft").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonLeft").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 	$("#buttonUp").click(function() {
 		konamiButtonPressed("u");
+		$("#buttonUp").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonUp").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 	$("#buttonDown").click(function() {
 		konamiButtonPressed("d");
+		$("#buttonDown").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonDown").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 	$("#buttonRight").click(function() {
 		konamiButtonPressed("r");
+		$("#buttonRight").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonRight").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 	$("#buttonA").click(function() {
 		konamiButtonPressed("a");
+		$("#buttonA").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonA").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 	$("#buttonB").click(function() {
 		konamiButtonPressed("b");
+		$("#buttonB").addClass("customKeyboardButtonClicked");
+		setTimeout(function(){
+			$("#buttonB").removeClass("customKeyboardButtonClicked");
+		}, 500);
 	});
 
 	function konamiButtonPressed(button) {
