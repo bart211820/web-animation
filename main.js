@@ -61,8 +61,35 @@ $(document).ready(function(){
 		$("#gameContainer").css("border-color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		$("body").css("color", "rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		$(".backgroundBox").css("border", "2px solid rgb(" + colorR + " " + colorG + " " + colorB + ")");
-		$(".background").css("border", "1px solid rgb(" + colorR + " " + colorG + " " + colorB + ")");
 		console.log("rgb(" + colorR + " " + colorG + " " + colorB + ")");
+	}
+
+	$("#buttonLeft").click(function() {
+		konamiButtonPressed("l");
+	});
+	$("#buttonUp").click(function() {
+		konamiButtonPressed("u");
+	});
+	$("#buttonDown").click(function() {
+		konamiButtonPressed("d");
+	});
+	$("#buttonRight").click(function() {
+		konamiButtonPressed("r");
+	});
+	$("#buttonA").click(function() {
+		konamiButtonPressed("a");
+	});
+	$("#buttonB").click(function() {
+		konamiButtonPressed("b");
+	});
+
+	function konamiButtonPressed(button) {
+		keyboardEntered += button;
+		if (keyboardEntered.length >= 10){
+			console.log(keyboardEntered);
+			checkKonamiCode();
+			keyboardEntered = "";
+		}
 	}
 
 
@@ -437,6 +464,7 @@ $(document).ready(function(){
 
 	$(document).on('mouseenter', '.state5 #squareB4', function () {
 
+		$("#customKeyboard").css('display', 'flex');
 		resetFields();
 		keyboardEntered = "";
 		showKonamiCode()
@@ -660,7 +688,7 @@ function rescaleBackground(){
 	var vensterWidth = $(window).width();
 	var vensterHeight = $(window).height();
 	var squareWidth = $(".squareContainer").width();
-	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth) + 2;
+	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth);
 	$(".background").css("width", backgroundWidth + "px");
 	console.log("did the thing");
 }
@@ -705,6 +733,8 @@ function checkKonamiCode(){
 	if(keyboardEntered == "uuddlrlrba" && $("#gameContainer").hasClass("state5")){
 		$("#gameContainer").removeClass("state5");
 		$("#gameContainer").addClass("state0");
+		$("#customKeyboard").css('display', 'none');
+
 		throwAParty();
 		
 		clearInterval(konamiInterval);
@@ -743,7 +773,7 @@ function throwAParty(){
 		    $(this).css('background-color', 'transparent');
 		    $("#squareB1").addClass("blinkBlack");
 		});
-	}, 2250);
+	}, 3000);
 }
 
 function colorsGoHogWild(){

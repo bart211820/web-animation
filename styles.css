@@ -44,6 +44,7 @@ h2{
 #optionsContainer{
 	margin: 0px auto 3vh;
 	width: 50vh;
+	display: none;
 }
 
 #optionsButton{
@@ -56,8 +57,8 @@ h2{
 	background-color: rgba(24, 24, 24, 0.2);
 	border-radius: 3px;
 	cursor: pointer;
-	display: none;
-	margin: 0px auto 10vh;
+	display: block;
+	margin: 0px auto 15vh;
 }
 
 #optionsButton:hover{
@@ -305,7 +306,6 @@ h2{
 	height: 100vh;
 	width: 63vh;
 	overflow: hidden;
-	border: 1px solid black;
 }
 
 .backgroundBox{
@@ -320,12 +320,67 @@ h2{
 	animation: AblackGoOutRightAway 0.5s;
 }
 
-@media screen and (orientation:portrait) {
+#customKeyboard{
+	width: 100%;
+	background-color: white;
+	position: absolute;
+	z-index: 25;
+	bottom: 0;
+	border-top: 7px solid black;
+	background-color: rgba(24, 24, 24, 0.2);
+	justify-content: space-between;
+	padding: 1vw;
+	display: none;
+}
+
+.customKeyboardButton{
+	background-color: black;
+	width: 15vw;
+	height: 15vw;
+	border-radius: 50%;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	color: white;
+	font-size: 10vw;
+	text-align: center;
+	background-size: 65% 80%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.customKeyboardButton:hover{
+	background-color: #BF181F;
+}
+
+#buttonLeft{
+	transform: rotate(270deg);
+	background-image: url(img/arrow1.png);
+}
+
+#buttonUp{
+	background-image: url(img/arrow1.png);
+}
+
+#buttonDown{
+	transform: rotate(180deg);
+	background-image: url(img/arrow1.png);
+}
+
+#buttonRight{
+	transform: rotate(90deg);
+	background-image: url(img/arrow1.png);
+}
+
+@media screen and (orientation:landscape) {
 	#optionsButton{
-		display: block;
+		display: none;
 	}
 
 	#optionsContainer{
-		display: none;
+		display: block;
+	}
+
+	#customKeyboard{
+		display: none !important;
 	}
 }
