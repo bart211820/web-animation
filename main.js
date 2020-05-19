@@ -671,31 +671,24 @@ window.addEventListener("keydown", function (event) {
   }
   switch (event.key) {
     case "ArrowDown":
-      console.log("d");
       keyboardEntered += "d";
       break;
     case "ArrowUp":
-      console.log("u");
       keyboardEntered += "u";
       break;
     case "ArrowLeft":
-      console.log("l");
       keyboardEntered += "l";
       break;
     case "ArrowRight":
-      console.log("r");
       keyboardEntered += "r";
       break;
     case "a":
-      console.log("a");
       keyboardEntered += "a";
       break;
     case "b":
-      console.log("b");
       keyboardEntered += "b";
       break;
     default:
-      console.log("*");
       keyboardEntered += "*";
   }
 
@@ -709,12 +702,71 @@ window.addEventListener("keydown", function (event) {
 }, true);
 
 function checkKonamiCode(){
-	console.log(keyboardEntered == "uuddlrlrba");
-	console.log($("#gameContainer").hasClass("state5"));
 	if(keyboardEntered == "uuddlrlrba" && $("#gameContainer").hasClass("state5")){
 		$("#gameContainer").removeClass("state5");
-		$("#gameContainer").addClass("state6");
+		$("#gameContainer").addClass("state0");
+		throwAParty();
 		
 		clearInterval(konamiInterval);
 	}
+}
+
+function throwAParty(){
+	document.getElementById("audioEffect").play(); 
+	colorsGoHogWild();
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 250);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 500);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 750);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 1000);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 1250);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 1500);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 1750);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 2000);
+	setTimeout(function(){
+		$(".squareBorder").each(function( index ) {
+		    $(this).css('background-color', 'transparent');
+		    $("#squareB1").addClass("blinkBlack");
+		});
+	}, 2250);
+}
+
+function colorsGoHogWild(){
+	$(".squareBorder").each(function( index ) {
+		switch (Math.floor((Math.random() * 9) + 1)) {
+		case 1:
+		case 2:
+	    	$(this).css('background-color', 'red');
+	    	break;
+	    case 3:
+	    case 4:
+	    	$(this).css('background-color', '#0000ff');
+	    	break;
+	    case 5:
+	    case 6:
+	    	$(this).css('background-color', '#ffff00');
+	    	break;
+	    case 7:
+	    case 8:
+	    	$(this).css('background-color', '#66ff66');
+	    	break;
+	    default:
+	    	$(this).css('background-color', 'white');
+	    }
+	});
 }
