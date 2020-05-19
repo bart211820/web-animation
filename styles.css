@@ -391,6 +391,18 @@ h2{
 .gameGoRed{
 	animation: goRedAnimation 1.5s linear;
 }
+
+#useKeyboardMessage{
+	width: 100%;
+    height: 4vh;
+    text-align: center;
+    background-color: #BF181F;
+    line-height: 3.7vh;
+    margin-top: -4vh;
+    color: white;
+    display: none;
+}
+
 @-webkit-keyframes goRedAnimation {
     0% {
         background-color: white;
@@ -419,6 +431,12 @@ h2{
 	}
 
 	#customKeyboard{
+		display: none !important;
+	}
+}
+
+@media screen and (orientation:portrait) {
+	#useKeyboardMessage{
 		display: none !important;
 	}
 }

@@ -489,6 +489,7 @@ $(document).ready(function(){
 	$(document).on('mouseenter', '.state5 #squareB4', function () {
 
 		$("#customKeyboard").css('display', 'flex');
+		$("#useKeyboardMessage").css('display', 'block');
 		resetFields();
 		keyboardEntered = "";
 		showKonamiCode()
@@ -758,6 +759,7 @@ function checkKonamiCode(){
 		$("#gameContainer").removeClass("state5");
 		$("#gameContainer").addClass("state0");
 		$("#customKeyboard").css('display', 'none');
+		$("#useKeyboardMessage").css('display', 'none');
 
 		throwAParty();
 		
