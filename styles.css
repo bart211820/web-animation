@@ -308,12 +308,19 @@ h2{
 	overflow: hidden;
 }
 
+#backgroundLeft .backgroundBox{
+	float: left;
+}
+
+#backgroundRight .backgroundBox{
+	float: right;
+}
+
 .backgroundBox{
 	width: 7vh;
     height: 7vh;
     border: 2px solid black;
     position: relative;
-    float: left;
 }
 
 .backgroundBox:hover{
@@ -379,6 +386,27 @@ h2{
 #buttonRight{
 	transform: rotate(90deg);
 	background-image: url(img/arrow1.png);
+}
+
+.gameGoRed{
+	animation: goRedAnimation 1.5s linear;
+}
+@-webkit-keyframes goRedAnimation {
+    0% {
+        background-color: white;
+    }
+    25% {
+        background-color: #BF181F;
+    }
+    50% {
+        background-color: white;
+    }
+    75% {
+        background-color: #BF181F;
+    }
+    100% {
+        background-color: white;
+    }
 }
 
 @media screen and (orientation:landscape) {

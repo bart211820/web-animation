@@ -763,6 +763,12 @@ function checkKonamiCode(){
 		
 		clearInterval(konamiInterval);
 	}
+	else if($("#gameContainer").hasClass("state5")){
+		$(".squareContainer").addClass("gameGoRed");
+		setTimeout(function(){
+			$(".squareContainer").removeClass("gameGoRed");
+		}, 1600);
+	}
 }
 
 function throwAParty(){
@@ -793,11 +799,23 @@ function throwAParty(){
 		colorsGoHogWild();
 	}, 2000);
 	setTimeout(function(){
+		colorsGoHogWild();
+	}, 2250);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 2500);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 2750);
+	setTimeout(function(){
+		colorsGoHogWild();
+	}, 3000);
+	setTimeout(function(){
 		$(".squareBorder").each(function( index ) {
 		    $(this).css('background-color', 'transparent');
 		    $("#squareB1").addClass("blinkBlack");
 		});
-	}, 3000);
+	}, 4000);
 }
 
 function colorsGoHogWild(){
