@@ -1,3 +1,6 @@
+var keyboardEntered = "";
+var konamiInterval;
+
 $(document).ready(function(){
 	rescaleBackground();
 
@@ -435,11 +438,11 @@ $(document).ready(function(){
 	$(document).on('mouseenter', '.state5 #squareB4', function () {
 
 		resetFields();
+		keyboardEntered = "";
 		showKonamiCode()
-		window.setInterval(function(){
+		konamiInterval = window.setInterval(function(){
 		  showKonamiCode();
 		}, 5500);
-		
 	}).on('mouseleave', '.state3 #squareI9', function () {
 		$("#gameContainer").removeClass("state5");
 		$("#gameContainer").addClass("state6");
@@ -660,4 +663,58 @@ function rescaleBackground(){
 	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth) + 2;
 	$(".background").css("width", backgroundWidth + "px");
 	console.log("did the thing");
+}
+
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return;
+  }
+  switch (event.key) {
+    case "ArrowDown":
+      console.log("d");
+      keyboardEntered += "d";
+      break;
+    case "ArrowUp":
+      console.log("u");
+      keyboardEntered += "u";
+      break;
+    case "ArrowLeft":
+      console.log("l");
+      keyboardEntered += "l";
+      break;
+    case "ArrowRight":
+      console.log("r");
+      keyboardEntered += "r";
+      break;
+    case "a":
+      console.log("a");
+      keyboardEntered += "a";
+      break;
+    case "b":
+      console.log("b");
+      keyboardEntered += "b";
+      break;
+    default:
+      console.log("*");
+      keyboardEntered += "*";
+  }
+
+  if (keyboardEntered.length >= 10){
+  	console.log(keyboardEntered);
+  	checkKonamiCode();
+  	keyboardEntered = "";
+  }
+
+  event.preventDefault();
+}, true);
+
+function checkKonamiCode(){
+	console.log(keyboardEntered == "uuddlrlrba");
+	console.log($("#gameContainer").hasClass("state5"));
+	if(keyboardEntered == "uuddlrlrba" && $("#gameContainer").hasClass("state5")){
+		$("#gameContainer").removeClass("state5");
+		$("#gameContainer").addClass("state6");
+		
+		clearInterval(konamiInterval);
+	}
 }
