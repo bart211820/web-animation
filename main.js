@@ -1,5 +1,13 @@
 $(document).ready(function(){
 	rescaleBackground();
+
+	$("#optionsButton").click(function() {
+		$("#optionsScreen").css("display", "block");
+	});
+	$("#closeOptionsButton").click(function() {
+		$("#optionsScreen").css("display", "none");
+	});
+
 	var colorR = 0;
 	var colorG = 0;
 	var colorB = 0;
@@ -22,6 +30,26 @@ $(document).ready(function(){
 
 	$(document).on('input', '#specialSlider', function() {
 	    special = $('#specialSlider').val();
+	    $("#content").css("transform", "perspective(0px) rotateY(" + (special) + "deg)");
+	});
+
+	$(document).on('input', '#colorRslider2', function() {
+	    colorR = $('#colorRslider2').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#colorGslider2', function() {
+	    colorG = $('#colorGslider2').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#colorBslider2', function() {
+	    colorB = $('#colorBslider2').val();
+	    setColors();
+	});
+
+	$(document).on('input', '#specialSlider2', function() {
+	    special = $('#specialSlider2').val();
 	    $("#content").css("transform", "perspective(0px) rotateY(" + (special) + "deg)");
 	});
 
@@ -410,16 +438,6 @@ $(document).ready(function(){
 		$("#gameContainer").addClass("state6");
 	});
 
-
-
-
-
-
-
-
-
-	
-
 });
 
 $(window).resize(rescaleBackground);
@@ -434,6 +452,7 @@ function rescaleBackground(){
 	var vensterWidth = $(window).width();
 	var vensterHeight = $(window).height();
 	var squareWidth = $(".squareContainer").width();
-	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth);
+	var backgroundWidth = squareWidth * Math.floor(((vensterWidth - (vensterHeight * 0.7)) / 2) / squareWidth) + 2;
 	$(".background").css("width", backgroundWidth + "px");
+	console.log("did the thing");
 }
